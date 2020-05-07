@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    <h1>Cryptocurrency and Exchange Rate Converter</h1>
+    <header>Cryptocurrency and Exchange Rate Converter</header>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <img src="/assets/cryptocurrency-3085139_1280.jpg" alt="Various cryptocurrency logos" style="width:60%;height:60%;">
+    <img src="assets/cryptocurrency-3085139_1280.jpg" alt="Various cryptocurrency logos" style="width:60%;height:60%;" class="center">
 
 
-    <div></div>
-    <select name="coinIn" size="5">
+    <main>
+        <select id="coinIn" size="5">
         <option value="1">BTC</option>
         <option value="2">ETH</option>
       </select>
 
-    <select name="currIn" size="5">
+        <select id="currIn" size="5">
         <option value="AUD">Australian Dollar</option>
         <option value="BGN">Bulgarian Lev</option>
         <option value="BRL">Brazilian Real</option>
@@ -60,7 +60,7 @@
         <option value="ZAR">South African Rand</option>
       </select>
 
-    <select name="currOut" size="5">
+        <select id="currOut" size="5">
         <option value="AUD">Australian Dollar</option>
         <option value="BGN">Bulgarian Lev</option>
         <option value="BRL">Brazilian Real</option>
@@ -94,6 +94,9 @@
         <option value="ZAR">South African Rand</option>
       </select>
 
-    <button type="button" onclick="">Calculate</button>
+        <button type="button" onclick="">Calculate</button>
+    </main>
+
+</body>
 
 </html>
