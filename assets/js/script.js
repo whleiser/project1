@@ -42,3 +42,5 @@ fetch("https://coinranking1.p.rapidapi.com/coin/1", {
     .catch(err => {
         console.log(err);
     });
+
+Event listener.onclick
