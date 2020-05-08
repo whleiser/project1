@@ -60,4 +60,3 @@ var calculateBtn = document.querySelector("#calculate")
 calculateBtn.addEventListener("click", function() {
     document.querySelector("#currIn").value;
 })
-Collapse
