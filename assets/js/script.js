@@ -1,4 +1,5 @@
 var selectedCoin;
+var result;
 // currency converter API
 function convertCur(to, amt) {
     fetch(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${to}&amount=${amt}`, {
@@ -11,27 +12,15 @@ function convertCur(to, amt) {
             return response.json();
         })
         .then(response => {
-            console.log("Currency Call", response);
-            console.log(parseInt(response.rates[to].rate_for_amount).toFixed(2))
+                console.log("Currency Call", response);
+                console.log(parseInt(response.rates[to].rate_for_amount).toFixed(2))
+                result = parseInt(response.rates[to].rate_for_amount).toFixed(2)); document.getElementById("result").innerHTML = result;
         })
-        .catch(err => {
-            console.log(err);
-        });
+.catch(err => {
+    console.log(err);
+});
 }
-// list of all coins API
-fetch("https://coinranking1.p.rapidapi.com/coins", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "coinranking1.p.rapidapi.com",
-            "x-rapidapi-key": "72012d0cf5mshbb531b8073fcc64p101575jsna4be690cc62b"
-        }
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+
 // current coin info API
 function getCoins(coinNum) {
     fetch(`https://coinranking1.p.rapidapi.com/coin/${coinNum}`, {
