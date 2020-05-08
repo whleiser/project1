@@ -1,5 +1,5 @@
 var selectedCoin;
-var result;
+var resultCal;
 // currency converter API
 function convertCur(to, amt) {
     fetch(`https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=USD&to=${to}&amount=${amt}`, {
@@ -12,13 +12,14 @@ function convertCur(to, amt) {
             return response.json();
         })
         .then(response => {
-                console.log("Currency Call", response);
-                console.log(parseInt(response.rates[to].rate_for_amount).toFixed(2))
-                result = parseInt(response.rates[to].rate_for_amount).toFixed(2)); document.getElementById("result").innerHTML = result;
+            console.log("Currency Call", response);
+            console.log(parseInt(response.rates[to].rate_for_amount).toFixed(2))
+            resultCal = parseInt(response.rates[to].rate_for_amount).toFixed(2);
+            document.getElementById("result").innerHTML = "Result: " + resultCal;
         })
-.catch(err => {
-    console.log(err);
-});
+        .catch(err => {
+            console.log(err);
+        });
 }
 
 // current coin info API
