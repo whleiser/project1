@@ -43,4 +43,20 @@ fetch("https://coinranking1.p.rapidapi.com/coin/1", {
         console.log(err);
     });
 
-Event listener.onclick
+document.querySelector("#calculate", function() {
+    document.querySelector("#coinIn").value;
+})
+
+var calculateBtn = document.querySelector("#calculate")
+calculateBtn.addEventListener("click", function() {
+    document.querySelector("#coinIn").value;
+})
+
+document.querySelector("#calculate", function() {
+    document.querySelector("#currIn").value;
+})
+
+var calculateBtn = document.querySelector("#calculate")
+calculateBtn.addEventListener("click", function() {
+    document.querySelector("#currIn").value;
+})
